@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+:root {
+    --bgColor: #faf8f6;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bgColor);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+#menu {
+    display: none;
+}
