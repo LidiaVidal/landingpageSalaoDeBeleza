@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/05049b833d.js" crossorigin="anonymous"></script>
     <title>Essência Studio</title>
 </head>
 <body>
     <header>
-        <a href="#">Essência Studio</a>
-        <nav>
-            <ul id="menu">
+        <div id="headerMobile">
+            <a href="#" id="logo">Essência Studio</a>
+            <button id="burguer" aria-label="menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <nav id="menu">
+            <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Galeria</a></li>
                 <li><a href="#">Depoimentos</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
-            <button><a href="#">Agendar</a></button>
+            <a href="#" id="btnAgendar">Agendar</a>
+            
         </nav>
     </header>
 
     <main>
         <section id="hero">
             <div>
-                <span>Alta Costura da Beleza</span>
+                <div id="spanInicio">
+                    <div id="linha"></div>
+                    <span id="span">Alta Costura da Beleza</span>
+                </div>
                 <h1>
-                    Beleza que revela. Cuidado <span>que pertence à sua essência.</span>
+                    Beleza que revela. <br> Cuidado que <br> <span>pertence à sua essência.</span>
                 </h1>
                 <p>Mais que um salão — um refúgio exclusivo onde técnicas de elite e cuidado feito sob medida se encontram para revelar a sua versão mais luminosa.</p>
 
@@ -34,10 +45,11 @@
                 </button>
                 <a href="#">Ver nossos serviços</a>
             </div>
-            <div>
-                <img src="assets/banner.webp" alt="Salão de beleza">
+            <div id="banner">
+                <img src="assets/img/bannerMobile.webp" alt="Salão de beleza">
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
