@@ -1,15 +1,20 @@
-let menu = document.getElementById("menu")
-let burguer = document.getElementById("burguer")
-burguer.addEventListener('click', clickMenu)
+const menu = document.getElementById("menu");
+const burguer = document.getElementById("burguer");
+const btnFechar = document.getElementById("btnFechar");
+const menuOverlay = document.getElementById("menu-overlay");
 
-function clickMenu() {
-    // Alterna a classe 'ativo' no elemento do menu
-    menu.classList.toggle('ativo');
-    
-    // Verifica se a classe 'ativo' está presente para trocar o ícone do botão
-    if (menu.classList.contains('ativo')) {
-        burguer.innerHTML = '<i class="fa-solid fa-x" aria-hidden="true"></i>';
-    } else {
-        burguer.innerHTML = '<i class="fa-solid fa-bars"></i>';
-    }
+// Evento para ABRIR o menu
+burguer.addEventListener('click', () => {
+    document.body.classList.add('menu-is-active');
+    menu.classList.add('ativo');
+});
+
+function fecharMenu() {
+    document.body.classList.remove('menu-is-active'); // Remove classe do body
+    menu.classList.remove('ativo');
 }
+
+btnFechar.addEventListener('click', fecharMenu);
+
+// UX extra: Fecha o menu se o usuário clicar na área borrada (overlay)
+menuOverlay.addEventListener('click', fecharMenu);

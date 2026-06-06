@@ -11,11 +11,14 @@
     <header>
         <div id="headerMobile">
             <a href="#" id="logo">Essência Studio</a>
-            <button id="burguer" aria-label="menu">
+            <button id="burguer" aria-label="menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
         <nav id="menu">
+            <button id="btnFechar" aria-label="fechar menu">
+                <i class="fa-solid fa-x"></i>
+            </button>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Serviços</a></li>
@@ -28,6 +31,7 @@
         </nav>
     </header>
 
+    <div id="menu-overlay" class="menu-overlay"></div>
     <main>
         <section id="hero">
             <div>
