@@ -52,9 +52,7 @@ header {
 }
 
 #menu.ativo {
-  transform: translateX(
-    0
-  );
+  transform: translateX(0);
 }
 
 #btnFechar {
@@ -83,7 +81,7 @@ header {
   text-decoration: none;
   color: var(--corTextoPadrao);
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -137,7 +135,10 @@ header {
   inset: 0;
   background-color: rgba(0, 0, 0, 0);
   z-index: 1000;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  visibility: hidden;
 }
 
 body.menu-is-active .menu-overlay {
@@ -148,45 +149,93 @@ body.menu-is-active .menu-overlay {
   -webkit-backdrop-filter: blur(8px);
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 24px 40px;
+  }
 
-@media screen and (min-width:1024px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  #menu {
+    width: 350px;
+  }
 
-    .header {
-        width: auto;
-    }
+  #menu ul {
+    margin-left: 0;
+    align-items: center;
+  }
 
-    #btnFechar, #burguer, .menu-overlay{
-        display: none;
-    }
-    #menu {
-        flex-direction: row;
-        gap: 25px;
-        flex-grow: 1;
-        align-items: center;
-        position: static;
-        height: auto;
-        padding: 0px;
-        transform: none;
-        box-shadow: none;
-    }
+  #menu a {
+    font-size: 16px;
+  }
 
-    #menu ul {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
-        text-align: center;
-        margin: 0 auto;
-    }
+  #btnFechar {
+    right: 40px;
+  }
+}
 
-    #menu > #btnAgendar {
-        border-radius: 10px;
-        margin: 0 24px 0;
-        padding: 10px 24px;
-        width: auto;
-    }
+@media screen and (min-width: 1024px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header {
+    width: auto;
+  }
+
+  #btnFechar,
+  #burguer,
+  .menu-overlay {
+    display: none;
+  }
+
+  #menu {
+    flex-direction: row;
+    gap: 25px;
+    flex-grow: 1;
+    align-items: center;
+    position: static;
+    height: auto;
+    padding: 0px;
+    transform: none;
+    box-shadow: none;
+  }
+
+  #menu ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  /*Hover do menu*/
+  #menu a {
+    position: relative;
+  }
+
+  #menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--corDetalhe);
+
+    transform: scaleX(0);
+    transform-origin: center; /* Faz a linha nascer do meio para as pontas */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #menu a:hover::after {
+    transform: scaleX(1);
+  }
+
+  #menu > #btnAgendar {
+    border-radius: 20px;
+    margin: 0 24px 0;
+    padding: 10px 24px;
+    width: auto;
+  }
 }
