@@ -1,0 +1,241 @@
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: var(--corFundoPadrao);
+  position: relative;
+  z-index: 1000;
+}
+
+#logo {
+  text-decoration: none;
+  font-size: 24px;
+  font-family: var(--fonteTitulo);
+  color: var(--corTextoPadrao);
+}
+
+#burguer {
+  border: none;
+  background-color: var(--corFundoPadrao);
+  font-size: 20px;
+  color: var(--corTextoPadrao);
+  cursor: pointer;
+  padding: 5px;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  background-color: var(--corFundoPadrao);
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  gap: 32px;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+
+  z-index: 1001;
+}
+
+#menu.ativo {
+  transform: translateX(0);
+}
+
+#btnFechar {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  border: none;
+  margin-top: 5px;
+  background: transparent;
+  font-size: 20px;
+  color: var(--corTextoPadrao);
+  cursor: pointer;
+  padding: 5px;
+}
+
+#menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: var(--corTextoPadrao);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#menu > #btnAgendar {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: 30px;
+  padding: 15px 0px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  align-self: center;
+  color: var(--corDetalhe);
+
+  border: 1px solid var(--corDetalhe);
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+#menu #btnAgendar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--corDetalhe);
+  z-index: -1;
+
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+#menu #btnAgendar:hover::before,
+#menu #btnAgendar:focus-visible::before {
+  transform: scaleX(1);
+}
+
+#menu #btnAgendar:hover,
+#menu #btnAgendar:focus-visible {
+  color: var(--corTextoPadrao);
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1000;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+body.menu-is-active .menu-overlay {
+  visibility: visible;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 24px 40px;
+  }
+
+  #menu {
+    width: 350px;
+  }
+
+  #menu ul {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  #menu a {
+    font-size: 16px;
+  }
+
+  #btnFechar {
+    right: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header {
+    width: auto;
+  }
+
+  #btnFechar,
+  #burguer,
+  .menu-overlay {
+    display: none;
+  }
+
+  #menu {
+    flex-direction: row;
+    gap: 25px;
+    flex-grow: 1;
+    align-items: center;
+    position: static;
+    height: auto;
+    padding: 0px;
+    transform: none;
+    box-shadow: none;
+  }
+
+  #menu ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  /*Hover do menu*/
+  #menu a {
+    position: relative;
+  }
+
+  #menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--corDetalhe);
+
+    transform: scaleX(0);
+    transform-origin: center; /* Faz a linha nascer do meio para as pontas */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #menu a:hover::after {
+    transform: scaleX(1);
+  }
+
+  #menu > #btnAgendar {
+    border-radius: 20px;
+    margin: 0 24px 0;
+    padding: 10px 24px;
+    width: auto;
+  }
+}
