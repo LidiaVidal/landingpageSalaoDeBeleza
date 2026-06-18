@@ -131,6 +131,47 @@
     left: 15px;
 }
 
+/* Estilo do cartão flutuante */
+.badge-estrelas {
+    position: absolute;
+    bottom: 30px; 
+    left: -32px; 
+    
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    
+    background-color: var(--corFundoPadrao);
+    padding: 8px 18px;
+    border: 1px solid var(--corDetalhe);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+    
+    font-family: var(--fontePadrao);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--corDetalhe);
+    
+    /* Chama a animação chamada 'flutuar' */
+    animation: flutuar 3.5s ease-in-out infinite;
+}
+
+.badge-estrelas > p > span {
+    color: var(--corTextoPadrao);
+}
+
+/* A mágica da animação acontece aqui */
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px); /* Sobe 12 pixels no meio da animação */
+    }
+    100% {
+        transform: translateY(0); /* Volta para a posição original */
+    }
+}
+
 @media screen and (min-width:768px) {
     .hero {
         flex-direction: row;
