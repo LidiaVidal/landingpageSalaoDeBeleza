@@ -37,6 +37,7 @@
 .copy {
     color: #6b6460;
     margin: 0 auto;
+    max-width: 350px;
 }
 
 .links {
@@ -49,6 +50,7 @@
 .btnReservar {
     display: block;
     padding: 16px 40px;
+    max-width: 350px;
     border-radius: 2px;
     background-color: var(--corTextoPadrao);
     color: var(--corFundoPadrao);
@@ -102,3 +104,25 @@
 .btnVerServico > img {
     font-weight: 400;
 }
+
+.banner {
+    background-image: url(../assets/img/bannerSalao-mobile.jpg);
+    width: 300px;
+    height: 428px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid var(--corDetalhe);
+    top: -10px;
+    left: 10px;
+}
+
