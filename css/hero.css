@@ -65,7 +65,7 @@
     z-index: 1;
     transition: color 0.3s ease-in-out;
 }
-
+/*Traço dourado*/
 .btnReservar::before {
   content: "";
   position: absolute;
@@ -192,7 +192,6 @@
 }
 
 @media screen and (min-width:1024px) {
-    
 
     .cta > h1 {
         font-size: 68px;
@@ -230,6 +229,7 @@
     .banner {
         background-image: url(../assets/img/bannerSalao-telasgrandes.jpg);
         width: 600px;
+        
     }
 }
 

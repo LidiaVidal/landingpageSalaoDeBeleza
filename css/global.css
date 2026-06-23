@@ -71,3 +71,9 @@ body {
     color: var(--corTextoPadrao);
     overflow-x: hidden;
 }
+
+@media screen and (min-width:1440px){
+    body {
+        margin: 10px 50px 0px;
+    }
+}
