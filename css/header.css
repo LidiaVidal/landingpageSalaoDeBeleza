@@ -154,6 +154,12 @@ body.menu-is-active .menu-overlay {
     padding: 24px 40px;
   }
 
+  #logo {
+  
+  font-size: 28px;
+  
+}
+
   #menu {
     width: 70%;
   }
@@ -249,3 +255,12 @@ body.menu-is-active .menu-overlay {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  #menu a {
+    font-size: 18px;
+  }
+
+  #menu > #btnAgendar {
+    font-size: 18px;
+  }
+}

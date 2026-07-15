@@ -1,0 +1,43 @@
+.stats-bar {
+  background-color: #f3efea;
+  border-top: 1px solid #e8d9c4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 24px;
+  gap: 32px;
+}
+
+.stats-bar .item-counter .number {
+  font-family: var(--fonteTitulo);
+  font-size: 40px;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+.stats-bar .item-counter p {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #6b6460;
+}
+
+@media screen and (min-width: 768px) {
+  .stats-bar {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 48px;
+  }
+
+  .stats-bar .item-counter {
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .stats-bar .item-counter .number {
+    font-size: 48px;
+  }
+}
