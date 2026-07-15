@@ -155,10 +155,8 @@ body.menu-is-active .menu-overlay {
   }
 
   #logo {
-  
-  font-size: 28px;
-  
-}
+    font-size: 28px;
+  }
 
   #menu {
     width: 70%;
@@ -256,6 +254,14 @@ body.menu-is-active .menu-overlay {
 }
 
 @media screen and (min-width: 1440px) {
+  header {
+    max-width: 1800px;
+    margin: auto;
+  }
+
+  #logo {
+    font-size: 32px;
+  }
   #menu a {
     font-size: 18px;
   }
