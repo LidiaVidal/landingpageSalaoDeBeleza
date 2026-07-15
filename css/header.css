@@ -105,6 +105,10 @@ header {
   transition: color 0.3s ease-in-out;
 }
 
+#menu > #btnAgendar > img {
+  display: none;
+}
+
 #menu #btnAgendar::before {
   content: "";
   position: absolute;
@@ -155,10 +159,8 @@ body.menu-is-active .menu-overlay {
   }
 
   #logo {
-  
-  font-size: 28px;
-  
-}
+    font-size: 28px;
+  }
 
   #menu {
     width: 70%;
@@ -248,14 +250,44 @@ body.menu-is-active .menu-overlay {
 
   #menu > #btnAgendar {
     border-radius: 20px;
-    font-size: 14px;
     margin: 0 30px 0 0px;
     padding: 10px 24px;
     width: auto;
   }
+
+  #menu > #btnAgendar {
+  
+  color: var(--corDetalhe);
+
+  border: 1px solid var(--corDetalhe);
+}
+
+#menu #btnAgendar::before {
+  background-color: #f0ebe4;
+  
+}
+
+
+  #menu > #btnAgendar > p {
+    display: none;
+  }
+
+  #menu > #btnAgendar > img {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  header {
+    max-width: 1800px;
+    margin: auto;
+  }
+
+  #logo {
+    font-size: 32px;
+  }
   #menu a {
     font-size: 18px;
   }

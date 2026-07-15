@@ -1,69 +1,69 @@
 .hero {
-    text-align: left;
-    margin: 20px 24px;
-    display: flex;
-    flex-direction: column;
+  text-align: left;
+  margin: 20px 24px;
+  display: flex;
+  flex-direction: column;
 }
 
 .subtitulo {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: var(--corDetalhe);
-    font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--corDetalhe);
+  font-weight: 500;
 }
 
 .subtitulo::before {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 1px;
-    background-color: var(--corDetalhe);
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: var(--corDetalhe);
 }
 
 .cta > h1 {
-    margin: 15px;
-    font-size: 40px;
-    font-family: var(--fonteTitulo);
-    font-weight: 300;
-    line-height: 1.3;
+  margin: 15px;
+  font-size: 40px;
+  font-family: var(--fonteTitulo);
+  font-weight: 300;
+  line-height: 1.3;
 }
 
 .cta h1 > span {
-    color: var(--corDetalhe);
+  color: var(--corDetalhe);
 }
 
 .copy {
-    color: #6b6460;
-    margin: 0 auto;
+  color: #6b6460;
+  margin: 0 auto;
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px;
 }
 
 .btnReservar {
-    display: block;
-    padding: 16px 40px;
-    max-width: 350px;
-    border-radius: 2px;
-    background-color: var(--corTextoPadrao);
-    color: var(--corFundoPadrao);
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 400;
+  display: block;
+  padding: 16px 40px;
+  max-width: 350px;
+  border-radius: 2px;
+  background-color: var(--corTextoPadrao);
+  color: var(--corFundoPadrao);
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
 
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: color 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
 }
 /*Traço dourado*/
 .btnReservar::before {
@@ -92,144 +92,156 @@
 }
 
 .btnVerServico {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--corDetalhe);
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--corDetalhe);
+  text-decoration: none;
 }
 
 .btnVerServico:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .btnVerServico > img {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .banner {
-    background-image: url(../assets/img/bannerSalao-mobile.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    width: 300px;
-    height: 428px;
-    position: relative;
-    margin: 30px auto;
+  background-image: url(../assets/img/bannerSalao-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 300px;
+  height: 428px;
+  position: relative;
+  margin: 30px auto;
 }
 
 .banner::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  z-index: -1;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    border: 1px solid var(--corDetalhe);
-    top: -15px;
-    left: 15px;
+  border: 1px solid var(--corDetalhe);
+  top: -15px;
+  left: 15px;
 }
 
 /* Estilo do cartão flutuante */
 .badge-estrelas {
-    position: absolute;
-    bottom: 30px; 
-    left: -32px; 
-    
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    
-    background-color: var(--corFundoPadrao);
-    padding: 8px 18px;
-    border: 1px solid var(--corDetalhe);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra elegante */
-    
-    font-family: var(--fontePadrao);
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--corDetalhe);
-    
-    /* Chama a animação chamada 'flutuar' */
-    animation: flutuar 3.5s ease-in-out infinite;
+  position: absolute;
+  bottom: 30px;
+  left: -32px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  background-color: var(--corFundoPadrao);
+  padding: 8px 18px;
+  border: 1px solid var(--corDetalhe);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+
+  font-family: var(--fontePadrao);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--corDetalhe);
+
+  /* Chama a animação chamada 'flutuar' */
+  animation: flutuar 3.5s ease-in-out infinite;
 }
 
 .badge-estrelas > p > span {
-    color: var(--corTextoPadrao);
+  color: var(--corTextoPadrao);
 }
 
 /* A mágica da animação acontece aqui */
 @keyframes flutuar {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-12px); /* Sobe 12 pixels no meio da animação */
-    }
-    100% {
-        transform: translateY(0); /* Volta para a posição original */
-    }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px); /* Sobe 12 pixels no meio da animação */
+  }
+  100% {
+    transform: translateY(0); /* Volta para a posição original */
+  }
 }
 
-@media screen and (min-width:768px) {
-    .hero {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+@media screen and (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .copy {
-        max-width: 300px;
-        padding: 0;
-        margin: 15px;
-    }
-    
-    .banner {
-        background-image: url(../assets/img/bannerSalao-tablet.jpg);
-        width: 300px;
-    }
+  .copy {
+    max-width: 300px;
+    padding: 0;
+    margin: 15px;
+  }
+
+  .banner {
+    background-image: url(../assets/img/bannerSalao-tablet.jpg);
+    width: 300px;
+  }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
+  .cta > h1 {
+    font-size: 68px;
+  }
 
-    .cta > h1 {
-        font-size: 68px;
-    }
+  .copy {
+    max-width: 500px;
+    padding: 0;
+    margin: 15px;
+  }
 
-    .copy {
-        max-width: 500px;
-        padding: 0;
-        margin: 15px;
-    }
+  .links {
+    flex-direction: row;
+    gap: 25px;
+    margin: 15px;
+    padding: 0;
+  }
 
-    .links {
-        flex-direction: row;
-        gap: 25px;
-        margin: 15px;
-        padding: 0;
-    }
+  .btnReservar {
+    display: block;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
 
-    .btnReservar {
-        display: block;
-        padding: 10px 20px; 
-        font-size: 12px;
-    }
-
-
-    .banner {
-        background-image: url(../assets/img/bannerSalao-desktop.jpg);
-        width: 460px;
-        height: 500px;
-        margin-right: 30px;
-    }
+  .banner {
+    background-image: url(../assets/img/bannerSalao-desktop.jpg);
+    width: 460px;
+    height: 500px;
+    margin-right: 30px;
+  }
 }
 
 @media screen and (min-width: 1400px) {
-    .banner {
-        background-image: url(../assets/img/bannerSalao-telasgrandes.jpg);
-        width: 600px;
-        
-    }
-}
+  .hero {
+    max-width: 1600px;
+    margin: auto;
+  }
+  .banner {
+    background-image: url(../assets/img/bannerSalao-telasgrandes.jpg);
+    width: 600px;
+  }
 
+  .subtitulo {
+    font-size: 14px;
+  }
+
+  .btnReservar {
+    font-size: 14px;
+  }
+
+  .badge-estrelas, .badge-estrelas p {
+    font-size: 14px;
+  }
+}
